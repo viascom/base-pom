@@ -2,6 +2,8 @@
 
 The POM module provides a parent pom which is also use in the GroundWork Project. It is part of the GroundWork Project by Viascom.
 
+[![Join the chat at https://gitter.im/Viascom/base-pom](https://badges.gitter.im/Viascom/base-pom.svg)](https://gitter.im/Viascom/base-pom?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Version:
 [![release](https://img.shields.io/badge/release-v1.3-brightgreen.svg)](https://github.com/Viascom/groundwork/tree/master/pom)<br/>
 [![develop](https://img.shields.io/badge/develop-v1.3-brightgreen.svg)](https://github.com/Viascom/groundwork/tree/develop/pom)
