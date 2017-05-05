@@ -2,6 +2,7 @@
 
 The POM module provides a parent pom which is also use in the GroundWork Project. It is part of the GroundWork Project by Viascom.
 
+[![Build Status](https://travis-ci.org/Viascom/base-pom.svg?branch=develop)](https://travis-ci.org/Viascom/base-pom)
 [![Join the chat at https://gitter.im/Viascom/base-pom](https://badges.gitter.im/Viascom/base-pom.svg)](https://gitter.im/Viascom/base-pom?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Version:
