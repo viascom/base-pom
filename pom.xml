@@ -6,7 +6,7 @@
 
     <groupId>ch.viascom.groundwork</groupId>
     <artifactId>pom</artifactId>
-    <version>1.5</version>
+    <version>1.6-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>base-pom</name>
