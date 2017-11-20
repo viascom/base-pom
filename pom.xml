@@ -6,7 +6,7 @@
 
     <groupId>ch.viascom.groundwork</groupId>
     <artifactId>pom</artifactId>
-    <version>1.7-SNAPSHOT</version>
+    <version>1.6</version>
     <packaging>pom</packaging>
 
     <name>base-pom</name>
@@ -68,8 +68,8 @@
     <!-- Properties -->
     <!-- ==================================================================================== -->
     <properties>
-        <!-- Default JDK Level -->
         <jdkLevel>1.8</jdkLevel>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- Default applicationserver properties -->
         <applicationserver.wildfly.hostname>localhost</applicationserver.wildfly.hostname>
