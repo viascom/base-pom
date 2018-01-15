@@ -6,7 +6,7 @@
 
     <groupId>ch.viascom.groundwork</groupId>
     <artifactId>pom</artifactId>
-    <version>1.6</version>
+    <version>1.7</version>
     <packaging>pom</packaging>
 
     <name>base-pom</name>
@@ -86,8 +86,9 @@
         <minify.skip>false</minify.skip>
 
         <!-- Default executable settings -->
-        <executable.main.class></executable.main.class>
+        <executable.mainClass></executable.mainClass>
         <executable.finalName>executable-output</executable.finalName>
+        <executable.outputDirectory>${project.build.directory}</executable.outputDirectory>
 
         <!-- Default executable jar settings -->
         <executable.jar.appendAssemblyId>true</executable.jar.appendAssemblyId>
@@ -175,7 +176,7 @@
                     <plugin>
                         <groupId>org.wildfly.plugins</groupId>
                         <artifactId>wildfly-maven-plugin</artifactId>
-                        <version>1.2.0.Final</version>
+                        <version>1.2.1.Final</version>
                         <configuration>
                             <hostname>${applicationserver.wildfly.hostname}</hostname>
                             <username>${applicationserver.wildfly.username}</username>
@@ -242,7 +243,7 @@
                             <transformers>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>${executable.main.class}</mainClass>
+                                    <mainClass>${executable.mainClass}</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -264,7 +265,7 @@
                                     <outfile>${project.build.directory}/${executable.finalName}.exe</outfile>
                                     <downloadUrl>http://java.com/download</downloadUrl>
                                     <classPath>
-                                        <mainClass>${executable.main.class}</mainClass>
+                                        <mainClass>${executable.mainClass}</mainClass>
                                         <preCp>anything</preCp>
                                     </classPath>
                                     <icon>${executable.windows.applicationIcon.path}</icon>
@@ -296,14 +297,15 @@
         <profile>
             <id>executable-jar</id>
             <build>
-                <finalName>${executable.finalName}</finalName>
                 <plugins>
                     <plugin>
                         <artifactId>maven-assembly-plugin</artifactId>
                         <configuration>
+                            <finalName>${executable.finalName}</finalName>
+                            <outputDirectory>${executable.outputDirectory}}</outputDirectory>
                             <archive>
                                 <manifest>
-                                    <mainClass>${executable.main.class}</mainClass>
+                                    <mainClass>${executable.mainClass}</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
@@ -345,7 +347,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>3.0.0-M1</version>
+                        <version>3.0.0</version>
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
@@ -407,14 +409,14 @@
             <dependency>
                 <groupId>ch.viascom.groundwork</groupId>
                 <artifactId>foxhttp</artifactId>
-                <version>1.3-RC1</version>
+                <version>1.3</version>
             </dependency>
 
             <!-- Lombock -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.16.18</version>
+                <version>1.16.20</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -435,13 +437,13 @@
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-api</artifactId>
-                <version>2.9.1</version>
+                <version>2.10.0</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-core</artifactId>
-                <version>2.9.1</version>
+                <version>2.10.0</version>
             </dependency>
 
             <!-- Java EE 8 -->
@@ -477,7 +479,7 @@
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
-                <version>2.11.0</version>
+                <version>2.13.0</version>
                 <scope>test</scope>
             </dependency>
 
@@ -492,7 +494,7 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>23.4-android</version>
+                <version>23.6-jre</version>
             </dependency>
 
             <!-- Apache Commons -->
@@ -505,7 +507,7 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.6</version>
+                <version>3.7</version>
             </dependency>
 
             <dependency>
@@ -575,7 +577,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-site-plugin</artifactId>
-                    <version>3.6</version>
+                    <version>3.7</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -598,7 +600,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.0.0-M1</version>
+                    <version>3.0.0</version>
                     <configuration>
                         <aggregate>true</aggregate>
                     </configuration>

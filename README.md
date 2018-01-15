@@ -3,8 +3,8 @@
 The POM module provides a parent pom which is also use in the GroundWork Project. It is part of the GroundWork Project by Viascom.
 
 ## Version:
-[![release](https://img.shields.io/badge/release-v1.6-brightgreen.svg)](https://github.com/Viascom/groundwork/tree/master/pom)<br/>
-[![develop](https://img.shields.io/badge/develop-v1.6-brightgreen.svg)](https://github.com/Viascom/groundwork/tree/develop/pom)
+[![release](https://img.shields.io/badge/release-v1.7-brightgreen.svg)](https://github.com/Viascom/groundwork/tree/master/pom)<br/>
+[![develop](https://img.shields.io/badge/develop-v1.7-brightgreen.svg)](https://github.com/Viascom/groundwork/tree/develop/pom)
 
 ## Profiles:
 
@@ -20,8 +20,9 @@ This profile generates a code coverage file based on your unit tests.
 ### Executable-Jar
 This profile creates a executable jar with the name of the build + -jar-with-dependencies
 You have to define the following properties.
-- `<executable.jar.main.class>Your Main-Class</executable.jar.main.class>`
-- `<executable.jar.finalName>executable-output</executable.jar.finalName>`
+- `<executable.mainClass>Your Main-Class</executable.mainClass>`
+- `<executable.finalName>Your executable name</executable.finalName>`
+- `<executable.outputDirectory>Your output directory</executable.outputDirectory>`
 - `<executable.jar.appendAssemblyId>true</executable.jar.appendAssemblyId>`
 
 ### Wildfly (wildfly)
