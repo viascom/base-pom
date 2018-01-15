@@ -522,7 +522,7 @@
     <!-- Build -->
     <!-- ==================================================================================== -->
     <build>
-        <finalName>${project.artifactId}-${project.version}</finalName>
+        <finalName>${executable.finalName}</finalName>
         <defaultGoal>install</defaultGoal>
 
         <plugins>
