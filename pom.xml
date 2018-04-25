@@ -6,7 +6,7 @@
 
     <groupId>ch.viascom.groundwork</groupId>
     <artifactId>pom</artifactId>
-    <version>1.8</version>
+    <version>1.8.1</version>
     <packaging>pom</packaging>
 
     <name>base-pom</name>
@@ -303,7 +303,7 @@
                         <artifactId>maven-assembly-plugin</artifactId>
                         <configuration>
                             <finalName>${executable.finalName}</finalName>
-                            <outputDirectory>${executable.outputDirectory}}</outputDirectory>
+                            <outputDirectory>${executable.outputDirectory}</outputDirectory>
                             <archive>
                                 <manifest>
                                     <mainClass>${executable.mainClass}</mainClass>
