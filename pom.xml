@@ -6,7 +6,7 @@
 
     <groupId>ch.viascom.groundwork</groupId>
     <artifactId>pom</artifactId>
-    <version>1.10</version>
+    <version>1.11</version>
     <packaging>pom</packaging>
 
     <name>base-pom</name>
@@ -410,14 +410,14 @@
             <dependency>
                 <groupId>ch.viascom.groundwork</groupId>
                 <artifactId>foxhttp</artifactId>
-                <version>1.3.2</version>
+                <version>1.3.4</version>
             </dependency>
 
             <!-- Lombock -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.16.20</version>
+                <version>1.16.22</version>
                 <scope>provided</scope>
             </dependency>
 
